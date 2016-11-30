@@ -34,8 +34,8 @@ public class MapScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //Intent intent = new Intent(MapScreen.this, CHANGE );
-                //startActivity(intent);
+                Intent intent = new Intent(MapScreen.this, SelectMeetupPointActivity.class );
+                startActivity(intent);
 
             }
         });
