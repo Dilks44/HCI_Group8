@@ -81,21 +81,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:id="@+id/createTrip"/>
+                android:id="@+id/createTrip"
+                android:backgroundTint="@android:color/holo_green_dark"/>
 
             <Button
                 android:text="Sign out"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:id="@+id/signOut"/>
+                android:id="@+id/signOut"
+                android:backgroundTint="@android:color/holo_green_dark"/>
 
             <Button
                 android:text="Secret Button"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:id="@+id/secretBtn"/>
+                android:id="@+id/secretBtn"
+                android:backgroundTint="@android:color/holo_green_dark"/>
         </LinearLayout>
 
 

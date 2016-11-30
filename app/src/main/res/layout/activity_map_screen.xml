@@ -21,19 +21,27 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="Back"
-            android:id="@+id/backToMainBtn"/>
+            android:id="@+id/backToMainBtn"
+            tools:ignore="HardcodedText"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/holo_green_dark"/>
 
 
         <SearchView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2.5"/>
+            android:layout_weight="2.5"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:orientation="horizontal"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:text="Friends"/>
+            android:text="Friends"
+            tools:ignore="HardcodedText"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/holo_green_dark"/>
 
 
     </LinearLayout>
@@ -46,7 +54,8 @@
         android:layout_weight="5"
         android:scaleType="fitCenter"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp"
+        android:contentDescription="map Image"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,7 +69,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_weight="2"
-            android:paddingLeft="5dp"/>
+            android:paddingLeft="5dp"
+            tools:ignore="HardcodedText"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_rectangle"/>
 
 
 
@@ -69,7 +81,11 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="Set Meetup Location"
-            android:id="@+id/setMeetup"/>
+            android:id="@+id/setMeetup"
+            tools:ignore="HardcodedText"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/holo_green_dark"/>
     </LinearLayout>
 
 </LinearLayout>
