@@ -10,12 +10,16 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
+
+import java.util.Random;
 
 /**
  * TODO: document your custom view class.
  */
 public class SelectMeetupPointView extends View {
+    private boolean _clicked = false;
 
     public SelectMeetupPointView(Context context) {
         super(context);
@@ -29,8 +33,25 @@ public class SelectMeetupPointView extends View {
         super(context, attrs, defStyleAttr);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public SelectMeetupPointView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+    @Override
+    public boolean onTouchEvent(MotionEvent motionEvent) {
+        float touchX = motionEvent.getX();
+        float touchY = motionEvent.getY();
+
+        switch (motionEvent.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                _clicked = true;
+
+                break;
+            case MotionEvent.ACTION_UP:
+                if (_clicked) {
+                    //add a nice looking pin and trigger Sarah's view
+                }
+
+                break;
+        }
+
+        invalidate();
+        return true;
     }
 }
