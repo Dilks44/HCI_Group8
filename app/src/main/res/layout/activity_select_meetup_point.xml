@@ -39,4 +39,12 @@
         android:textColor="#ffffff"
         android:textAlignment="center" />
 
+    <include
+        android:id="@+id/meetup_confirmation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/meetup_toolbar_layout"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"></include>
 </RelativeLayout>
