@@ -11,6 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button mCreateTrip;
+    // temporary.. will be removed later
+    private Button mSecretButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent= new Intent(MainActivity.this, CreateTrip.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+        mSecretButton = (Button) findViewById(R.id.secretBtn);
+        mSecretButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(MainActivity.this, MapScreen.class);
                 startActivity(intent);
 
             }
