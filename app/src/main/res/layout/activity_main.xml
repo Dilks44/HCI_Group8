@@ -79,14 +79,23 @@
             <Button
                 android:text="Create new Trip"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:id="@+id/createTrip"/>
 
             <Button
                 android:text="Sign out"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:id="@+id/signOut"/>
+
+            <Button
+                android:text="Secret Button"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/secretBtn"/>
         </LinearLayout>
 
 
