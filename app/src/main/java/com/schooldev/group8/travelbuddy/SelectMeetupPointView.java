@@ -1,6 +1,8 @@
 package com.schooldev.group8.travelbuddy;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -12,6 +14,8 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.GridLayout;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -46,6 +50,11 @@ public class SelectMeetupPointView extends View {
             case MotionEvent.ACTION_UP:
                 if (_clicked) {
                     //add a nice looking pin and trigger Sarah's view
+                    GridLayout meetup_toolbar = (GridLayout) ((Activity) getContext()).findViewById(R.id.meetup_toolbar_layout);
+
+                    if (meetup_toolbar != null) {
+                        meetup_toolbar.setVisibility(VISIBLE);
+                    }
                 }
 
                 break;
