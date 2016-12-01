@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SelectMeetupPointActivity extends AppCompatActivity {
@@ -14,6 +15,11 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_meetup_point);
+
+        SelectMeetupPointView mpv = (SelectMeetupPointView) findViewById(R.id.meetupView);
+        ImageView pin = (ImageView) findViewById(R.id.pin);
+
+        mpv.setPin(pin);
     }
 
     public void onClickCancel (View v) {
