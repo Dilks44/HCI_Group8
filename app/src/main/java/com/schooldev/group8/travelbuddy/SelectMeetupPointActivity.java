@@ -1,6 +1,7 @@
 package com.schooldev.group8.travelbuddy;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,5 +28,8 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
         Toast.makeText(this, "Meetup Location Set", Toast.LENGTH_SHORT).show();
 
         meetup_toolbar.setVisibility(View.GONE);
+
+        Intent intent = new Intent(SelectMeetupPointActivity.this, MapScreen.class);
+        startActivity(intent);
     }
 }
