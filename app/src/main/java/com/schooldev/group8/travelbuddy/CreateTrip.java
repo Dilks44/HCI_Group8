@@ -1,6 +1,7 @@
 package com.schooldev.group8.travelbuddy;
 
 import android.content.Intent;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,14 @@ public class CreateTrip extends AppCompatActivity {
 
         });
 
-
+        Button mFinishedBtn = (Button) findViewById(R.id.doneBtn);
+        mFinishedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(CreateTrip.this, MembersActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
