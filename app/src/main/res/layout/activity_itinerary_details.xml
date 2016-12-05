@@ -40,7 +40,7 @@
         </SearchView>
 
         <Button
-            android:text="Maps"
+            android:text="populate with GMaps"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/launchMapsBtn" />

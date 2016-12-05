@@ -13,8 +13,24 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editTripName"
-        android:hint="Enter Trip Name"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="HardcodedText"
+        android:hint="Enter trip name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/startDate"
+        android:hint="start date"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/endDate"
+        android:hint="end date"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,12 +40,13 @@
         android:id="@+id/destinationsSection"
         android:background="@color/colorPrimaryLighter">
 
-        <Button
-            android:text="Select Start Date"
+        <TextView
+            android:text="Itinerary Items:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/startDate"
-            tools:ignore="HardcodedText"/>
+            android:id="@+id/textView6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textAlignment="center"/>
 
         <Space
             android:layout_width="1dp"
