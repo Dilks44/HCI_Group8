@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -20,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
-        android:id="@+id/destinationsSection">
+        android:id="@+id/destinationsSection"
+        android:background="@color/colorPrimaryLighter">
 
         <Button
             android:text="Select Start Date"
@@ -29,44 +31,56 @@
             android:id="@+id/startDate"
             tools:ignore="HardcodedText"/>
 
-        <TextView
-            android:text="TextView"
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            tools:ignore="HardcodedText"
-            tools:text="Down here is where you begin to add itinerary iteams"/>
+            android:layout_height="45dp"
+            android:background="@color/colorLightGray"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:paddingLeft="10dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:text="Location Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locNameTextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:text="10:00 am - 12:00 pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripTimeTextView" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
 
         <Button
             android:text="Add new itinerary item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/addNewItin"/>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <Button
+        android:text="Continue"
+        android:layout_height="wrap_content"
+        android:id="@+id/continueBtn"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/actionsBar">
-
-        <Button
-            android:text="+"
-            android:layout_height="match_parent"
-            android:id="@+id/addNewLoc"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textColor="@android:color/holo_green_dark"
-            tools:ignore="HardcodedText"/>
-
-        <Button
-            android:text="I'm Done                  >"
-            android:layout_height="match_parent"
-            android:id="@+id/doneBtn"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:textColor="@android:color/holo_green_dark"
-            tools:ignore="HardcodedText"/>
-    </LinearLayout>
+        android:layout_weight="0.4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
 </LinearLayout>
