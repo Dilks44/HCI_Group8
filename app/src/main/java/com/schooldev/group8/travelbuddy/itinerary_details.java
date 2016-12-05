@@ -22,7 +22,7 @@ public class itinerary_details extends AppCompatActivity {
 
                 //Intent intent = new Intent(itinerary_details.this, CreateTrip.class);
                 //startActivity(intent);
-                finishActivity(RESULT_CANCELED);
+                finish();
 
             }
         });

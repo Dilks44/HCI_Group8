@@ -52,13 +52,50 @@
                 android:layout_width="match_parent"
                 android:text="Trips:"
                 android:layout_weight="1"
-                android:layout_height="0dp"/>
+                android:layout_height="0dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
-            <TextView
+            <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:text="Trip 1"
-                android:layout_weight="1"
-                android:layout_height="0dp"/>
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:theme="?attr/actionBarTheme"
+                android:minHeight="?attr/actionBarSize"
+                android:id="@+id/toolbar2">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="\nItally with family!"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="June 17th\n Mom, Dad, Brother\n 3 itinerary items"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:paddingLeft="10dp"/>
+
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_18dp"
+                        android:id="@+id/backImageButton"
+                        android:backgroundTint="@android:color/transparent"
+                        android:layout_gravity="right"
+                        android:paddingLeft="60dp"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
 
             <TextView
                 android:layout_width="match_parent"
