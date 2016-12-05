@@ -24,8 +24,10 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
 
     public void onClickCancel (View v) {
         GridLayout meetup_toolbar = (GridLayout) findViewById(R.id.meetup_toolbar_layout);
+        ImageView pin = (ImageView) findViewById(R.id.pin);
 
         meetup_toolbar.setVisibility(View.GONE);
+        pin.setVisibility(View.GONE);
     }
 
     public void onClickCheck (View v) {
