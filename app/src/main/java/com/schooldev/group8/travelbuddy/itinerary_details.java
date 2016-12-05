@@ -15,7 +15,7 @@ public class itinerary_details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_details);
 
-        mDoneBtn = (Button) findViewById(R.id.backToMainBtn);
+        mDoneBtn = (Button) findViewById(R.id.returnResultData);
         mDoneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
