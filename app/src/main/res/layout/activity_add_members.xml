@@ -6,6 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1">
 
+    <Button
+        android:text="temp Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tempBackBtn"/>
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -27,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/ic_keyboard_arrow_left_white_18dp"
-                android:id="@+id/imageButton"
+                android:id="@+id/backImageButton"
                 android:backgroundTint="@android:color/transparent"
                 android:layout_gravity="left"
                 />
@@ -156,6 +162,12 @@
             android:background="#d6d7d7" />
 
     </GridLayout>
+
+    <Button
+        android:text="tempForward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tempForward"/>
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarAddMembers"

@@ -20,8 +20,9 @@ public class itinerary_details extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(itinerary_details.this, CreateTrip.class);
-                startActivity(intent);
+                //Intent intent = new Intent(itinerary_details.this, CreateTrip.class);
+                //startActivity(intent);
+                finishActivity(RESULT_CANCELED);
 
             }
         });

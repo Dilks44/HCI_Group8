@@ -35,7 +35,7 @@ public class CreateTrip extends AppCompatActivity {
         mContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(CreateTrip.this, MapScreen.class);
+                Intent intent= new Intent(CreateTrip.this, AddMembersActivity.class);
                 startActivity(intent);
             }
         });
