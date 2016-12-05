@@ -10,6 +10,7 @@ import android.widget.Button;
 public class CreateTrip extends AppCompatActivity {
 
     private Button mNewItenBtn;
+    private Button mContinueBtn;
     private int RESULT_WITH_DATA = 1;
 
     @Override
@@ -30,11 +31,11 @@ public class CreateTrip extends AppCompatActivity {
 
         });
 
-        Button mFinishedBtn = (Button) findViewById(R.id.doneBtn);
-        mFinishedBtn.setOnClickListener(new View.OnClickListener() {
+        mContinueBtn = (Button) findViewById(R.id.continueBtn);
+        mContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(CreateTrip.this, MembersActivity.class);
+                Intent intent= new Intent(CreateTrip.this, MapScreen.class);
                 startActivity(intent);
             }
         });
