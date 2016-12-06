@@ -3,7 +3,7 @@ package com.schooldev.group8.travelbuddy;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
+import android.widget.SearchView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,7 +17,7 @@ public class AddMembersActivity extends AppCompatActivity {
     private ImageButton mBackBtn;
     private Button tempBackBtn;
     private Button tempForwardBtn;
-    private ArrayList<String> addedMembers;
+    private ArrayList<String> addedMembers=new ArrayList<String> ();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
