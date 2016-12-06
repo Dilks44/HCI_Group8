@@ -83,7 +83,8 @@
             android:layout_column="0"
             android:inputType="text"
             android:queryHint="Search"
-            android:iconifiedByDefault="false" >
+            android:iconifiedByDefault="false"
+            android:id="@+id/searchViewFB">
         </SearchView>
 
         <ImageView
@@ -115,7 +116,8 @@
             android:layout_column="0"
             android:inputType="text"
             android:queryHint="Search"
-            android:iconifiedByDefault="false" >
+            android:iconifiedByDefault="false"
+            android:id="@+id/searchViewSMS">
         </SearchView>
 
         <ImageView
@@ -147,7 +149,8 @@
             android:layout_column="0"
             android:inputType="text"
             android:queryHint="Search"
-            android:iconifiedByDefault="false" >
+            android:iconifiedByDefault="false"
+            android:id="@+id/searchViewEmail">
         </SearchView>
 
         <ImageView
