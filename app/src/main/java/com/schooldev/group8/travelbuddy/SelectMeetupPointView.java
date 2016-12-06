@@ -27,6 +27,8 @@ import java.util.Random;
 public class SelectMeetupPointView extends View {
     private boolean _clicked = false;
     private ImageView _pin;
+    private static int currPinX = 0;
+    private static int currPinY = 0;
 
     public SelectMeetupPointView(Context context) {
         super(context);
@@ -42,6 +44,14 @@ public class SelectMeetupPointView extends View {
 
     public void setPin(ImageView pin) {
         _pin = pin;
+    }
+
+    public static int getPinX() {
+        return currPinX;
+    }
+
+    public static int getPinY() {
+        return currPinY;
     }
 
     @Override
@@ -60,6 +70,8 @@ public class SelectMeetupPointView extends View {
                     layoutParams.setMargins(touchX-25, touchY-100, 0, 0);
                     _pin.setLayoutParams(layoutParams);
                     _pin.setVisibility(View.VISIBLE);
+                    currPinX = touchX;
+                    currPinY = touchY;
 
                     GridLayout meetup_toolbar = (GridLayout) ((Activity) getContext()).findViewById(R.id.meetup_toolbar_layout);
 
