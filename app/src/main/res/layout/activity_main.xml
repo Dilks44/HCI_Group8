@@ -15,14 +15,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:id="@+id/ProfileWelcome">
 
             <ImageView
@@ -43,18 +45,61 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="4"
             android:layout_height="0dp"
-            android:id="@+id/activeTrips">
+            android:id="@+id/activeTrips"
+            >
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:text="Trips:"
-                android:layout_weight="1"
+                android:layout_weight="0.56"
                 android:layout_height="0dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:useDefaultMargins="true"
+                android:columnOrderPreserved="false"
+                android:columnCount="4"
+                android:background="@color/colorPrimaryLighter"
+                >
+
+                <TextView
+                    android:text="Itally\n with Family!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:text="June 17th\n Mom, Dad, Brother\n 3 itinerary items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnSpan="1"
+                    android:id="@+id/textView7"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textAlignment="center"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    android:id="@+id/editItineraryBtn"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:text=">"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/viewMap"/>
+
+            </GridLayout>
+
+            <!--
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,12 +135,12 @@
                         android:id="@+id/backImageButton"
                         android:backgroundTint="@android:color/transparent"
                         android:layout_gravity="right"
-                        android:paddingLeft="60dp"/>
+                        />
 
                 </LinearLayout>
 
             </android.support.v7.widget.Toolbar>
-
+-->
 
             <TextView
                 android:layout_width="match_parent"
@@ -131,14 +176,6 @@
                 android:backgroundTint="@android:color/holo_green_dark"
                 android:textColor="@android:color/white"/>
 
-            <Button
-                android:text="Secret Button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/secretBtn"
-                android:backgroundTint="@android:color/holo_green_dark"
-                android:textColor="@android:color/white"/>
         </LinearLayout>
 
 

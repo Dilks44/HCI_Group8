@@ -11,8 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button mCreateTrip;
-    // temporary.. will be removed later
-    private Button mSecretButton;
+    private Button mViewMapBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +30,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        mSecretButton = (Button) findViewById(R.id.secretBtn);
-        mSecretButton.setOnClickListener(new View.OnClickListener() {
+        mViewMapBtn = (Button) findViewById(R.id.viewMap);
+        mViewMapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -43,14 +41,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String test = "This is a tesst";
-
-
-        String test2 = "omg is this working??";
-
-
-        //TextView testTextView = (TextView) findViewById(R.id.testTextBox);
-
-        //testTextView.setText(test2);
     }
 }

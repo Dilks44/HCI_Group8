@@ -13,10 +13,13 @@ public class CreateTrip extends AppCompatActivity {
     private Button mNewItenBtn;
     private Button mContinueBtn;
 
+    private android.support.v7.widget.Toolbar toolbar;
+
 
     private TextView mLocName;
     private TextView mLocTime;
     private TextView mLocAddr;
+    private boolean isReturned;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,10 @@ public class CreateTrip extends AppCompatActivity {
         mLocName = (TextView) findViewById(R.id.locNameTextView);
         mLocTime = (TextView) findViewById(R.id.tripTimeTextView);
         mLocAddr = (TextView) findViewById(R.id.tripAddressView);
+
+
+        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar1);
+        toolbar.setVisibility(View.INVISIBLE);
 
 
         mNewItenBtn = (Button) findViewById(R.id.addNewItin);
@@ -62,6 +69,9 @@ public class CreateTrip extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // am not using this at the moment
+        if (isReturned == true) {
+            toolbar.setVisibility(View.VISIBLE);
+        }
 
     }
 
@@ -76,6 +86,7 @@ public class CreateTrip extends AppCompatActivity {
                 mLocName.setText("Eiffel Tower");
                 mLocTime.setText("8:00 am - 6:00 pm");
                 mLocAddr.setText("Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France");
+                isReturned = true;
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 //Write your code if there's no result
