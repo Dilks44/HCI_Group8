@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/textView4"
+            android:id="@+id/tripNameText"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <EditText
@@ -67,7 +67,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView4"
+            android:layout_toEndOf="@+id/tripNameText"
             android:id="@+id/locationNameData"
             android:hint="name.."
             android:layout_weight="1"/>
@@ -93,7 +93,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView4"
+            android:layout_toEndOf="@+id/tripNameText"
             android:id="@+id/addressData"
             android:hint="type address here"
             android:layout_weight="1"
@@ -200,7 +200,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView4"
+            android:layout_toEndOf="@+id/tripNameText"
             android:id="@+id/arrivalTimeData"
             android:hint="Set Arrival Time"
             android:layout_weight="1"/>
@@ -228,7 +228,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView4"
+            android:layout_toEndOf="@+id/tripNameText"
             android:id="@+id/durationTimeData"
             android:hint="Set Duration"
             android:layout_weight="1"/>

@@ -1,5 +1,6 @@
 package com.schooldev.group8.travelbuddy;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ public class itinerary_details extends AppCompatActivity {
 
     private Button mDoneBtn;
     private Button mPopulateBtn;
+    private int RESULT_WITH_DATA = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +26,11 @@ public class itinerary_details extends AppCompatActivity {
 
                 //Intent intent = new Intent(itinerary_details.this, CreateTrip.class);
                 //startActivity(intent);
+                Intent returnIntent = new Intent();
+                String result = "hello";
+                returnIntent.putExtra("result",result);
+                setResult(Activity.RESULT_OK, returnIntent);
                 finish();
-
             }
         });
 
@@ -43,8 +48,6 @@ public class itinerary_details extends AppCompatActivity {
                 startHrs.setText("8am");
                 TextView endHrs = (TextView) findViewById(R.id.endHours);
                 endHrs.setText("8pm");
-
-
 
 
             }
