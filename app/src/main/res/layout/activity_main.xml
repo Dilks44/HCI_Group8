@@ -164,7 +164,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/createTrip"
-                android:backgroundTint="@android:color/holo_green_dark"
+                android:backgroundTint="@color/colorPrimary"
                 android:textColor="@android:color/white"/>
 
             <Button
@@ -173,7 +173,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/signOut"
-                android:backgroundTint="@android:color/holo_green_dark"
+                android:backgroundTint="@color/colorPrimary"
                 android:textColor="@android:color/white"/>
 
         </LinearLayout>

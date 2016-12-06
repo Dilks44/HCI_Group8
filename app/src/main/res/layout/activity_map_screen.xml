@@ -24,7 +24,7 @@
             android:id="@+id/backToMainBtn"
             tools:ignore="HardcodedText"
             android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_green_dark"/>
+            android:backgroundTint="@color/colorPrimary"/>
 
 
         <SearchView
@@ -41,7 +41,7 @@
             android:text="Friends"
             tools:ignore="HardcodedText"
             android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_green_dark"
+            android:backgroundTint="@color/colorPrimary"
             android:id="@+id/friendsBtn"/>
 
 
@@ -85,7 +85,7 @@
             tools:ignore="HardcodedText"
             style="@style/Widget.AppCompat.Button.Colored"
             android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_green_dark"/>
+            android:backgroundTint="@color/colorPrimary"/>
     </LinearLayout>
 
 </LinearLayout>
