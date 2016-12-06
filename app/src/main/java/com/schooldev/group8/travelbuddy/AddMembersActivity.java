@@ -24,33 +24,11 @@ public class AddMembersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_members);
 
-        tempBackBtn = (Button) findViewById(R.id.tempBackBtn);
-        tempBackBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(AddMembersActivity.this, "New Trip Created!!", Toast.LENGTH_SHORT).show();
-                finish();
-
-            }
-        });
-
-        tempForwardBtn = (Button) findViewById(R.id.tempForward);
-        tempForwardBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(AddMembersActivity.this, MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
-        // TODO - Can you actually click on toolbars? Because its not working right now..
         mBackBtn = (ImageButton) findViewById(R.id.backImageButton);
         mBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishActivity(RESULT_CANCELED);
+                finish();
 
             }
 
@@ -74,13 +52,19 @@ public class AddMembersActivity extends AppCompatActivity {
                 if(!toAdd.isEmpty() && !toAdd.equals("Search"))
                     addedMembers.add(toAdd);
 
+
+                String[] arrayAddedMembers = null;
                 int numMembers = addedMembers.size();
-                String[] arrayAddedMembers = new String[numMembers];
-                for (int i=0; i<numMembers; i++) {
-                    arrayAddedMembers[i] = addedMembers.get(i);
+
+                if(numMembers!=0) {
+                    arrayAddedMembers = new String[numMembers];
+                    for (int i = 0; i < numMembers; i++) {
+                        arrayAddedMembers[i] = addedMembers.get(i);
+                    }
                 }
 
-                intent.putExtra(ADDED_MEMBERS, addedMembers);
+                intent.putExtra(ADDED_MEMBERS, arrayAddedMembers);
+                Toast.makeText(AddMembersActivity.this, "Invitations Sent!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
