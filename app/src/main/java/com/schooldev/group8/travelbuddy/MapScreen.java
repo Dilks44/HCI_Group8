@@ -30,7 +30,9 @@ public class MapScreen extends AppCompatActivity {
         mBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(MapScreen.this, MainActivity.class );
+                intent.putExtra("bool", 1);
+                startActivity(intent);
             }
         });
 
