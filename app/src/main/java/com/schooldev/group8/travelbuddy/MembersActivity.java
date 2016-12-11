@@ -53,7 +53,6 @@ public class MembersActivity extends AppCompatActivity {
         if (_memberList == null) {
             _memberList = new ArrayList<String>();
             _memberList.add("Me");
-            _memberList.add("Jen");
         }
 
         //add any new members
