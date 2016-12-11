@@ -47,7 +47,7 @@
             android:id="@+id/StartDateText"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
@@ -56,7 +56,8 @@
             android:layout_toEndOf="@+id/tripNameText"
             android:id="@+id/startDateTV"
             android:hint="Set Start Date"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +74,7 @@
             android:id="@+id/endDateText"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -82,7 +83,8 @@
             android:id="@+id/endDateTV"
             android:hint="Set End Date"
             android:layout_weight="1"
-            android:inputType="date"/>
+            android:inputType="date"
+            android:textSize="20sp"/>
     </LinearLayout>
 
 
