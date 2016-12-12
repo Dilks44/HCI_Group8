@@ -4,13 +4,13 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/colorPrimaryLighter">
+              android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10px">
 
         <TextView
             android:text="Trip Name:"
@@ -36,7 +36,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10px">
 
         <TextView
             android:text="Start Date:"
@@ -63,7 +64,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10px">
 
         <TextView
             android:text="End Date:"
@@ -87,16 +89,13 @@
             android:textSize="20sp"/>
     </LinearLayout>
 
-
-
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
         android:id="@+id/destinationsSection"
-        android:background="@color/colorPrimaryLighter"
+        android:layout_margin="20px"
         >
 
         <TextView
@@ -234,6 +233,7 @@
         android:id="@+id/continueBtn"
         android:layout_width="match_parent"
         android:layout_weight="0.4"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
         android:textSize="18sp" />
 </LinearLayout>

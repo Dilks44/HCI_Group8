@@ -40,7 +40,7 @@
         </SearchView>
 
         <Button
-            android:text="populate with GMaps"
+            android:text="Go"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/launchMapsBtn" />
@@ -203,7 +203,8 @@
             android:layout_toEndOf="@+id/tripNameText"
             android:id="@+id/arrivalTimeData"
             android:hint="Set Arrival Time"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:descendantFocusability="blocksDescendants" />
 
     </LinearLayout>
 
@@ -236,11 +237,13 @@
     </LinearLayout>
 
     <Button
-        android:text="DONE"
-        android:layout_width="match_parent"
+        android:text="Done"
         android:layout_height="wrap_content"
         android:id="@+id/returnResultData"
-        android:layout_weight="0.06"/>
-
+        android:layout_width="match_parent"
+        android:layout_weight="0.4"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:textSize="18sp" />
 
 </LinearLayout>
