@@ -121,33 +121,62 @@
             android:paddingLeft="10dp"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-            <LinearLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
 
-                <TextView
-                    android:text="Location Name"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/locNameTextView"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    android:textSize="16sp" />
+                    android:orientation="vertical"
+                    android:id="@+id/linLayout1">
 
-                <TextView
-                    android:text="address"
+
+                    <TextView
+                        android:text="Location Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/locNameTextView"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:text="address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tripAddressView" />
+
+                    <TextView
+                        android:text="time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tripTimeTextView" />
+                </LinearLayout>
+
+
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tripAddressView" />
+                    android:layout_toRightOf="@id/linLayout1"
+                    app:srcCompat="@android:drawable/ic_delete"
+                    android:id="@+id/imageButton6"/>
 
-                <TextView
-                    android:text="time"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tripTimeTextView" />
-            </LinearLayout>
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    android:id="@+id/editItineraryBtn"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_toRightOf="@id/imageButton6"
+                    />
+
+            </RelativeLayout>
+
         </android.support.v7.widget.Toolbar>
+
+
 
         <Space
             android:layout_width="1dp"
