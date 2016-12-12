@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textViewTemp;
     private GridLayout mGridLayout;
+
+    private ImageButton mImageBtn;
 
 
 
@@ -77,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mImageBtn = (ImageButton) findViewById(R.id.editItineraryBtn);
+        mImageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(MainActivity.this, EditTrip.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

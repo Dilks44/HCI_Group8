@@ -46,9 +46,9 @@ public class itinerary_details extends AppCompatActivity {
                 TextView address = (TextView) findViewById(R.id.addressData);
                 address.setText("Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France");
                 TextView startHrs = (TextView) findViewById(R.id.startHours);
-                startHrs.setText("8am");
+                startHrs.setText("8:00am");
                 TextView endHrs = (TextView) findViewById(R.id.endHours);
-                endHrs.setText("8pm");
+                endHrs.setText("6:00pm");
 
 
             }

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorPrimaryLighter">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Trip Name:"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/tripNameText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tripNameText"
+            android:id="@+id/tripNameTV"
+            android:hint="name.."
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Start Date:"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/StartDateText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/tripNameText"
+            android:id="@+id/startDateTV"
+            android:hint="Set Start Date"
+            android:layout_weight="1"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="End Date:"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/endDateText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/endDateText"
+            android:id="@+id/endDateTV"
+            android:hint="Set End Date"
+            android:layout_weight="1"
+            android:inputType="date"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:id="@+id/destinationsSection"
+        android:background="@color/colorPrimaryLighter"
+        >
+
+        <TextView
+            android:text="Itinerary Items:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textAlignment="center"/>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightGray"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:paddingLeft="10dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:text="Location Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locNameTextView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:text="address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripAddressView" />
+
+                <TextView
+                    android:text="time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripTimeTextView" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="10dp"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightGray"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:paddingLeft="10dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:text="Location Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/locNameTextView2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:text="address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripAddressView2" />
+
+                <TextView
+                    android:text="time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tripTimeTextView2" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <Button
+            android:text="Add new itinerary item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addNewItin"/>
+
+    </LinearLayout>
+
+    <Button
+        android:text="Done"
+        android:layout_height="wrap_content"
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_weight="0.4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+</LinearLayout>
