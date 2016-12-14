@@ -22,8 +22,10 @@ public class AddMembersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Display screen that shows current group member list and allows for adding/interacting with users/user details
         setContentView(R.layout.activity_add_members);
 
+        // When the Back button is clicked, return to the previous screen
         mBackBtn = (ImageButton) findViewById(R.id.backImageButton);
         mBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,7 @@ public class AddMembersActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent= new Intent(AddMembersActivity.this, MembersActivity.class);
 
+                // Add members to the member list through the FaceBook, SMS, and Email search bars
                 String toAdd = ((SearchView)findViewById(R.id.searchViewFB)).getQuery().toString().trim();
                 if(!toAdd.isEmpty() && !toAdd.equals("Search"))
                     addedMembers.add(toAdd);
@@ -63,6 +66,7 @@ public class AddMembersActivity extends AppCompatActivity {
                     }
                 }
 
+                // Set Toast message to let user know that adding a member was successful
                 intent.putExtra(ADDED_MEMBERS, arrayAddedMembers);
                 Toast.makeText(AddMembersActivity.this, "Invitations Sent!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
