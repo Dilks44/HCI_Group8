@@ -39,6 +39,7 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Display the screen that allows the user to select a position by touching the fullscreen map
         setContentView(R.layout.activity_select_meetup_point);
 
         SelectMeetupPointView mpv = (SelectMeetupPointView) findViewById(R.id.meetupView);
@@ -47,10 +48,12 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
         mpv.setPin(pin);
     }
 
+    // Getter to determine whether a meetup point has been placed
     public static boolean getMeetupPointSet() {
         return meetupPointSet;
     }
 
+    // When the cancel button is clicked, remove the pin icon and the check/'x' toolbar
     public void onClickCancel (View v) {
         GridLayout meetup_toolbar = (GridLayout) findViewById(R.id.meetup_toolbar_layout);
         ImageView pin = (ImageView) findViewById(R.id.pin);
@@ -59,12 +62,15 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
         pin.setVisibility(View.GONE);
     }
 
+    // When the check button is clicked, the meetup location has been confirmed, and user is returned to the MapScreen
     public void onClickCheck (View v) {
         GridLayout meetup_toolbar = (GridLayout) findViewById(R.id.meetup_toolbar_layout);
 
+        // Set message to inform user that setting the meetup point was successful, as the screen changes
         Toast.makeText(this, "Meetup Location Set", Toast.LENGTH_SHORT).show();
         meetupPointSet = true;
 
+        // Remove check/'x' toolbar
         meetup_toolbar.setVisibility(View.GONE);
 
         mNotificationIntent = new Intent(getApplicationContext(),  MapScreen.class);
@@ -84,6 +90,7 @@ public class SelectMeetupPointActivity extends AppCompatActivity {
         mNotificationManager.notify(MY_NOTIFICATION_ID, notificationBuilder.build());
 
 
+        // Switch the the main map screen
         Intent intent = new Intent(SelectMeetupPointActivity.this, MapScreen.class);
         startActivity(intent);
     }
