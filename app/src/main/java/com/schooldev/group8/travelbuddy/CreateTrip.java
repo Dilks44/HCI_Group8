@@ -41,6 +41,7 @@ public class CreateTrip extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Display screen that allows user to input basic trip info (name, etc.)
         setContentView(R.layout.activity_create_trip);
 
 
@@ -80,6 +81,7 @@ public class CreateTrip extends AppCompatActivity {
 
         });
 
+        // Setup calendar dating
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
@@ -91,6 +93,7 @@ public class CreateTrip extends AppCompatActivity {
 
 
 
+        // When clicking the continue button, movce on to adding group members (from adding destinations)
         mContinueBtn = (Button) findViewById(R.id.continueBtn);
         mContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +107,7 @@ public class CreateTrip extends AppCompatActivity {
 
     }
 
+    // Allow selection of trip day 1
     private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
 
         public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -114,6 +118,8 @@ public class CreateTrip extends AppCompatActivity {
             updateDisplay();
         }
     };
+    
+    // Allow selectionof trip day 2
     private DatePickerDialog.OnDateSetListener mDateSetListener2 = new DatePickerDialog.OnDateSetListener() {
 
         public void onDateSet(DatePicker view, int year, int monthOfYear,
