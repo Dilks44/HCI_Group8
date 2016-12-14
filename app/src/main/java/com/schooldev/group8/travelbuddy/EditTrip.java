@@ -44,6 +44,7 @@ public class EditTrip extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Display screen allowing user to add/delete destinations
         setContentView(R.layout.activity_edit_trip);
 
         TextView tripNameText = (TextView) findViewById(R.id.tripNameTV);
@@ -57,6 +58,7 @@ public class EditTrip extends AppCompatActivity {
         mLocAddr2 = (TextView) findViewById(R.id.tripAddressView2);
 
 
+        // Some default display info for the demo
         mLocName.setText("Quai Branly Museum");
         mLocTime.setText("7:00 am - 5:00 pm");
         mLocAddr.setText("37 Quai Branly, 75007 Paris, France");
