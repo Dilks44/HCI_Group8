@@ -25,7 +25,7 @@ import java.util.Random;
  * TODO: document your custom view class.
  */
 public class SelectMeetupPointView extends View {
-    private boolean _clicked = false;
+    private boolean _clicked = false; //to make sure a proper click occurred
     private ImageView _pin;
     private static int currPinX = 0;
     private static int currPinY = 0;
@@ -66,13 +66,15 @@ public class SelectMeetupPointView extends View {
                 break;
             case MotionEvent.ACTION_UP:
                 if (_clicked) {
+                    //set the pin's position by margins
                     RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(50, 100);
                     layoutParams.setMargins(touchX-25, touchY-100, 0, 0);
                     _pin.setLayoutParams(layoutParams);
-                    _pin.setVisibility(View.VISIBLE);
+                    _pin.setVisibility(View.VISIBLE); // aparecium pin
                     currPinX = touchX;
                     currPinY = touchY;
 
+                    //show confirmation
                     GridLayout meetup_toolbar = (GridLayout) ((Activity) getContext()).findViewById(R.id.meetup_toolbar_layout);
 
                     if (meetup_toolbar != null) {

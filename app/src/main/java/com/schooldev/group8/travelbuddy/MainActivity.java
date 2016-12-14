@@ -30,12 +30,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
         mGridLayout = (GridLayout) findViewById(R.id.gridLayout);
         textViewTemp = (TextView) findViewById(R.id.textViewTemp);
 
-
+        //check for trips that are already saved
         Bundle extras = getIntent().getExtras();
 
         if (extras != null) {
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             mGridLayout.setVisibility(View.INVISIBLE);
         }
 
-
+        // create new trip button
         mCreateTrip = (Button) findViewById(R.id.createTrip);
         mCreateTrip.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //clicking a previous trip
         mViewMapBtn = (Button) findViewById(R.id.viewMap);
         mViewMapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //sign out - not really needed rn
         mSignOut = (Button) findViewById(R.id.signOut);
         mSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // button that edits the trip
         mImageBtn = (ImageButton) findViewById(R.id.editItineraryBtn);
         mImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override

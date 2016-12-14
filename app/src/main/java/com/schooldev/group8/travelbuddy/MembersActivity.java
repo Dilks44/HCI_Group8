@@ -65,6 +65,7 @@ public class MembersActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.memberList);
 
+        //create adapter for listview. Referenced android docs
         _arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, _memberList);
         listView.setAdapter(_arrayAdapter);
 
@@ -73,10 +74,13 @@ public class MembersActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?>adapter, View v, int position, long id){
                 Object item = adapter.getItemAtPosition(position);
 
+                //slide out the current menu if one is open
                 if (menuActive) {
                     iconSet.startAnimation(slideOutRight);
                     iconSet.setVisibility(View.INVISIBLE);
                 }
+
+                // slide in the menu relevant to the tapped one
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) iconSet.getLayoutParams();
                 params.height = v.getHeight();
                 params.topMargin=v.getTop();
@@ -87,11 +91,13 @@ public class MembersActivity extends AppCompatActivity {
             }
         });
 
+        //set up click listeners for all the icons in the slid in view
         ImageView backIcon = (ImageView) findViewById(R.id.backIcon);
         ImageView phoneIcon = (ImageView) findViewById(R.id.phoneIcon);
         ImageView messageIcon = (ImageView) findViewById(R.id.messageIcon);
         ImageView deleteIcon = (ImageView) findViewById(R.id.deleteIcon);
 
+        //slide out the menu
         backIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +107,7 @@ public class MembersActivity extends AppCompatActivity {
             }
         });
 
+        //delete the person
         deleteIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,17 +118,20 @@ public class MembersActivity extends AppCompatActivity {
                 adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        //removes the entry from the listview
                         _memberList.remove(_activeMember);
                         _arrayAdapter.notifyDataSetChanged();
                     }});
                 adb.show();
 
+                //slide menu back out
                 iconSet.startAnimation(slideOutRight);
                 iconSet.setVisibility(View.INVISIBLE);
                 menuActive=false;
             }
         });
 
+        // click for anything else
         iconSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,6 +143,7 @@ public class MembersActivity extends AppCompatActivity {
 
         FloatingActionButton addBtn = (FloatingActionButton) findViewById(R.id.addBtn);
 
+        // start new addmembersactivity
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -141,6 +152,7 @@ public class MembersActivity extends AppCompatActivity {
             }
         });
 
+        // go to map
         Button doneBtn = (Button) findViewById(R.id.nextBtn);
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,35 +162,5 @@ public class MembersActivity extends AppCompatActivity {
             }
         });
     }
-
-//    public void onSaveInstanceState(Bundle savedInstanceState) {
-//        // Save the user's current game state
-//        savedInstanceState.putStringArrayList("Members", _memberList);
-//
-//        // Always call the superclass so it can save the view hierarchy state
-//        super.onSaveInstanceState(savedInstanceState);
-//    }
 }
 
-//class AnimationTask extends TimerTask {
-//    MembersActivity _membersActivity;
-//    int _stepSize = 5;
-//    float _stepSizePerSecond = 300;
-//
-//    public AnimationTask(MembersActivity membersActivity) {
-//        _membersActivity = membersActivity;
-//    }
-//
-//    @Override
-//    public void run() {
-//        _animationView._xBallLocation += _stepSize;
-//
-//        if(_animationView._xBallLocation >= _animationView.getWidth() - _animationView._ballRadius) {
-//            _stepSize = -1 * _stepSize;
-//        } else if (_animationView._xBallLocation - _animationView._ballRadius <= 0) {
-//            _stepSize = -1 * _stepSize;
-//        }
-//
-//        _animationView.postInvalidate();
-//    }
-//}

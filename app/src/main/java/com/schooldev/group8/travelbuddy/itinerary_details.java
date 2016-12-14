@@ -32,14 +32,11 @@ public class itinerary_details extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_details);
 
-
+        // done button - goes back to itinerary page
         mDoneBtn = (Button) findViewById(R.id.returnResultData);
         mDoneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //Intent intent = new Intent(itinerary_details.this, CreateTrip.class);
-                //startActivity(intent);
                 Intent returnIntent = new Intent();
                 String result = "hello";
                 returnIntent.putExtra("result",result);
@@ -48,6 +45,7 @@ public class itinerary_details extends AppCompatActivity {
             }
         });
 
+        // populate the fields in iterary page - currently hardcoded
         mPopulateBtn = (Button) findViewById(R.id.launchMapsBtn);
         mPopulateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +65,7 @@ public class itinerary_details extends AppCompatActivity {
             }
         });
 
+        //allow user to pick using a clock for arrival time.
         arrivalTime = (EditText) findViewById(R.id.arrivalTimeData);
         arrivalTime.setInputType(InputType.TYPE_NULL); //not to be confused with the pokemon ;__;
 
@@ -78,6 +77,7 @@ public class itinerary_details extends AppCompatActivity {
             }
         });
 
+        // put in a number for duration
         EditText duration = (EditText) findViewById(R.id.durationTimeData);
         duration.setInputType(InputType.TYPE_CLASS_NUMBER);
     }
@@ -101,6 +101,8 @@ public class itinerary_details extends AppCompatActivity {
         }
 
         @RequiresApi(api = Build.VERSION_CODES.N)
+
+        //formats the numbers properly and populates the edit area with the string.
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
             String period = "AM";
             DecimalFormat formatter = new DecimalFormat("00");
